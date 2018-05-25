@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "use_jquery": true
+    },
+    "shared_keys": {
+        "ACL": {
+            "caption": "Elements Google Maps API Key",
+            "type": "client_safe"
+        }
+    }
+}
