@@ -1,0 +1,108 @@
+{
+    "caption": "Directions",
+    "doc": "Show direction between 2 points with support to waypoints",
+    "fields": {
+        "ADa": {
+            "caption": "Waypoints List",
+            "doc": "Optional list of waypoint along the route",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "waypoints_list",
+            "optional": true,
+            "rank": 6,
+            "value": "geographic_address"
+        },
+        "ADb": {
+            "caption": "Origin address",
+            "default_val": "",
+            "doc": "Specifies the start location from which to calculate directions",
+            "editor": "DynamicValue",
+            "name": "origin_address",
+            "rank": 0,
+            "value": "geographic_address"
+        },
+        "ADc": {
+            "caption": "Destination address",
+            "doc": "Specifies the end location to which to calculate directions",
+            "editor": "DynamicValue",
+            "name": "destination_address",
+            "rank": 1,
+            "value": "geographic_address"
+        },
+        "ADd": {
+            "caption": "Travel mode",
+            "default_val": "Driving",
+            "doc": "Specifies what mode of transport to use when calculating directions. Valid values are Driving, Bicycling, Transit or Walking.",
+            "editor": "DynamicValue",
+            "name": "travel_mode",
+            "options": "Driving,Bicycling,Transit,Walking",
+            "rank": 2,
+            "value": "text"
+        },
+        "ADf": {
+            "caption": "Driving options",
+            "doc": "Set keys and values as needed, leave empty to ignore.   For example, a key can be \"departureTime\" with a value of \"Current Date/Time\" or a future one.  Another key can be \"trafficModel\" with a value of \"bestguess\", \"pessimistic\",  \"optimistic \".  For more information, please visit https://developers.google.com/maps/documentation/javascript/directions#DrivingOptions for options",
+            "editor": "key_value_list",
+            "name": "driving_options",
+            "rank": 3,
+            "value": "text"
+        },
+        "ADg": {
+            "caption": "Transit options",
+            "doc": "Set keys and values as needed, leave empty to ignore.   When requesting transit directions, the Avoid Highways, Avoid Tolls, Waypoints List and Optimize Waypoints options will be ignored.  Possible keys are \"arrivalTime \", \"departureTime\", \"modes\" and \"routingPreference\".  For more  information, please visit https://developers.google.com/maps/documentation/javascript/directions#TransitOptions",
+            "editor": "key_value_list",
+            "name": "transit_options",
+            "rank": 4,
+            "value": "text"
+        },
+        "ADh": {
+            "caption": "Unit system",
+            "default_val": "Metric",
+            "doc": "Metric (Km) or Imperial (Miles)",
+            "editor": "Dropdown",
+            "name": "unit_system",
+            "options": "Metric,Imperial",
+            "rank": 5
+        },
+        "ADi": {
+            "caption": "Optimize Waypoints",
+            "default_val": false,
+            "doc": "Specifies that the route using the supplied waypoints may be optimized by rearranging the waypoints in a more efficient order. If true, the Directions service will return the reordered waypoints in a waypoint_order field.",
+            "editor": "DynamicValue",
+            "name": "optimize_waypoints",
+            "optional": true,
+            "rank": 7,
+            "value": "boolean"
+        },
+        "ADj": {
+            "caption": "Avoid Ferries",
+            "default_val": false,
+            "doc": "When set to yes indicates that the calculated route(s) should avoid ferries, if possible.",
+            "editor": "DynamicValue",
+            "name": "avoid_ferries",
+            "optional": true,
+            "rank": 8,
+            "value": "boolean"
+        },
+        "ADk": {
+            "caption": "Avoid Highways",
+            "default_val": false,
+            "doc": "When set to yes indicates that the calculated route(s) should avoid major highways, if possible.",
+            "editor": "DynamicValue",
+            "name": "avoid_highways",
+            "optional": true,
+            "rank": 9,
+            "value": "boolean"
+        },
+        "ADl": {
+            "caption": "Avoid Tolls",
+            "default_val": false,
+            "doc": "When set to yes indicates that the calculated route(s) should avoid toll roads, if possible",
+            "editor": "DynamicValue",
+            "name": "avoid_tolls",
+            "optional": true,
+            "rank": 10,
+            "value": "boolean"
+        }
+    }
+}

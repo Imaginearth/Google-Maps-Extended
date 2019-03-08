@@ -1,0 +1,76 @@
+{
+    "caption": "Clusters (BETA)",
+    "doc": "Show a list of points in a cluster",
+    "fields": {
+        "ADp": {
+            "caption": "Map Type",
+            "default_val": "Roadmap",
+            "editor": "Dropdown",
+            "name": "map_type",
+            "options": "Roadmap,Satellite,Hybrid,Terrain",
+            "rank": 0
+        },
+        "ADq": {
+            "caption": "Zoom",
+            "default_val": 3,
+            "doc": "Optional zoom level.  By not using a zoom level the map will zoom to include all points by default",
+            "editor": "DynamicValue",
+            "name": "zoom",
+            "optional": true,
+            "rank": 2,
+            "value": "number"
+        },
+        "ADr": {
+            "caption": "Attach Event",
+            "default_val": false,
+            "doc": "When active the map will trigger an event & update its state.  This is useful of you need to know what is clicked on the map",
+            "editor": "Checkbox",
+            "name": "attach_event",
+            "rank": 3
+        },
+        "ADv": {
+            "caption": "Data Type",
+            "editor": "custom_type",
+            "name": "list_type",
+            "rank": 4
+        },
+        "ADx": {
+            "caption": "Types to Plot",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "types_to_plot",
+            "rank": 5,
+            "value": "custom_data_ADv"
+        },
+        "ADz": {
+            "caption": "Geolocation Field",
+            "editor": "custom_field_ADv",
+            "field_type_restriction": "geographic_address",
+            "name": "geolocation_field",
+            "rank": 6
+        },
+        "AEA": {
+            "caption": "Center To Address",
+            "default_val": "",
+            "editor": "DynamicValue",
+            "name": "center_to_address",
+            "optional": true,
+            "rank": 1,
+            "value": "geographic_address"
+        },
+        "AEB": {
+            "caption": "Label Field",
+            "editor": "custom_field_ADv",
+            "field_type_restriction": "text_image_file",
+            "name": "label_field",
+            "rank": 7
+        },
+        "AEC": {
+            "caption": "Cluster Image",
+            "editor": "DynamicValue",
+            "name": "cluster_image",
+            "rank": 8,
+            "value": "image"
+        }
+    }
+}

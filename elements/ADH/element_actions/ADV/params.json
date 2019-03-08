@@ -1,0 +1,27 @@
+{
+    "caption": "Show Layers",
+    "doc": "Show additional layers like traffic, transit or bicycling on the map",
+    "fields": {
+        "ADW": {
+            "caption": "Traffic",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "traffic",
+            "rank": 0
+        },
+        "ADX": {
+            "caption": "Transit",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "transit",
+            "rank": 1
+        },
+        "ADY": {
+            "caption": "Bicycling",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "bicycling",
+            "rank": 2
+        }
+    }
+}

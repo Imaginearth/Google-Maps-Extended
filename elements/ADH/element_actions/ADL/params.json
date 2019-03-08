@@ -1,0 +1,70 @@
+{
+    "caption": "Add Marker",
+    "doc": "Add a marker to the map",
+    "fields": {
+        "ADM": {
+            "caption": "Map type",
+            "default_val": "Roadmap",
+            "doc": "Type of map to show",
+            "editor": "Dropdown",
+            "name": "map_type",
+            "options": "Roadmap,Satellite,Hybrid,Terrain",
+            "rank": 0
+        },
+        "ADN": {
+            "caption": "Address",
+            "default_val": "",
+            "doc": "The geo-address of where to add the marker.",
+            "editor": "DynamicValue",
+            "name": "address",
+            "rank": 1,
+            "value": "geographic_address"
+        },
+        "ADO": {
+            "caption": "Center to address",
+            "default_val": true,
+            "doc": "Centers the map to the address provided",
+            "editor": "Checkbox",
+            "name": "center_to_address",
+            "rank": 2
+        },
+        "ADP": {
+            "caption": "Tooltip",
+            "default_val": "I am a marker",
+            "doc": "The tooltip of the marker.  Leave empty of not required",
+            "editor": "DynamicValue",
+            "name": "tooltip",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "ADQ": {
+            "caption": "Info window",
+            "default_val": "<p>Hey, I accept <strong>HTML</strong></p>",
+            "doc": "A popup info window displays custom HTML.  Leave empty of not required",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "info_window",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ADR": {
+            "caption": "Zoom",
+            "default_val": 13,
+            "doc": "The zoom level",
+            "editor": "DynamicValue",
+            "name": "zoom",
+            "rank": 3,
+            "value": "number"
+        },
+        "ADU": {
+            "caption": "Attach Event",
+            "default_val": false,
+            "doc": "When active the map will trigger an event & update its state.  This is useful of you need to know what is clicked on the map",
+            "editor": "Checkbox",
+            "name": "attach_event",
+            "rank": 6
+        }
+    }
+}
