@@ -12,6 +12,11 @@
             "caption": "Marker Clicked",
             "doc": "Executes when a marker is clicked",
             "name": "marker_clicked"
+        },
+        "AEW": {
+            "caption": "An event is fired",
+            "doc": "Executes when an event listener is fired.  Data can be accessed under the element exposed states for that listener",
+            "name": "event_listener"
         }
     },
     "fields": {
@@ -26,6 +31,7 @@
         },
         "ADJ": {
             "caption": "Center Location",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "center_location",
             "rank": 1,
@@ -34,6 +40,7 @@
         "ADK": {
             "caption": "Zoom",
             "default_val": 4,
+            "doc": "",
             "editor": "DynamicValue",
             "name": "zoom",
             "rank": 2,
@@ -44,12 +51,6 @@
             "editor": "Label",
             "name": "control_map_actions,_like_markers_or_directions_using_the_workflow.",
             "rank": 3
-        },
-        "ADn": {
-            "caption": "This plugin is created using Google Maps JavaScript APIs.  For more  information, please visit https://developers.google.com/maps/documentation/javascript",
-            "editor": "Label",
-            "name": "this_plugin_is_created_using_google_maps_javascript_apis.__for_more__information,_please_visit_https://developers.google.com/maps/documentation/javascript",
-            "rank": 4
         }
     },
     "icon": "ion-map",
@@ -63,11 +64,75 @@
     "states": {
         "ADT": {
             "caption": "Marker Clicked",
+            "doc": "The marker that is clicked",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
             "name": "marker_clicked",
             "value": "geographic_address"
+        },
+        "AEa": {
+            "caption": "Event type fired",
+            "doc": "The type of the event listener fired.  For a complete list of events please see google maps documentation",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "event_listener_fired",
+            "value": "text"
+        },
+        "AEe": {
+            "caption": "Map Center Lat",
+            "doc": "Map center latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_center_lat",
+            "value": "number"
+        },
+        "AEh": {
+            "caption": "Map Center Lng",
+            "doc": "Map Center Longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_center_lng",
+            "value": "number"
+        },
+        "AEj": {
+            "caption": "Map Bounds NorthEast Lat",
+            "doc": "Map bounds north east latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_bounds_northeast_lat",
+            "value": "number"
+        },
+        "AEk": {
+            "caption": "Map Bounds NorthEast Lng",
+            "doc": "Map bounds north east longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_bounds_northeast_lng",
+            "value": "number"
+        },
+        "AEl": {
+            "caption": "Map Bounds SouthWest Lat",
+            "doc": "Map bounds south west latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_bounds_southwest_lat",
+            "value": "number"
+        },
+        "AEm": {
+            "caption": "Map Bounds SouthWest Lng",
+            "doc": "Map bounds south west longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_bounds_southwest_lng",
+            "value": "number"
         }
     }
 }

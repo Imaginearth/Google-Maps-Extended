@@ -1,13 +1,6 @@
 function(instance, context) {
 
-//Create unique ID of instance
-let instanceid = (Math.random() * Math.pow(2, 54)).toString(36);
-
-
-//Load API Key
-//Get Bubble Dynamic List and store in a variable
-let gmapAPI = context.keys['Google Maps API Key (Elements)'];
-
+//Function to load scripts dynamically
 function loadMapScript(filepath) {
     if ($('head script[src="' + filepath + '"]').length > 0)
         return;
@@ -17,8 +10,25 @@ function loadMapScript(filepath) {
     $('head').append(ele);
 }
 
+//Load API Key
+$(document).ready(function(){
+    setTimeout(function(){
+        //https://stackoverflow.com/questions/9228958/how-to-check-if-google-maps-api-is-loaded
+        if (typeof google === 'object' && typeof google.maps === 'object') {
+            console.log('mapext api already loaded');
+        }else{
+            let key = window.gm_key; //Current key Bubble is using
+            loadMapScript(`https://maps.googleapis.com/maps/api/js?key=${key}`);
+            console.log('mapext api loaded');
+        }
+    },300);
+});
 
-  
+
+
+//Create unique ID of instance
+let instanceid = (Math.random() * Math.pow(2, 54)).toString(36);
+
 //Create the DIV
 let div;
 div = $('<div class="gmapext" id="gmapext_' + instanceid + '"></div>');
@@ -32,6 +42,5 @@ let parentDiv = $(div).parent();
 instance.data.instanceid = `gmapext_${instanceid}`;
 instance.data.div = div;
 instance.data.parentDiv = parentDiv;
-
 
 }

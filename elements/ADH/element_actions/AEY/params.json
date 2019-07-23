@@ -1,0 +1,12 @@
+{
+    "caption": "Clear All Event Listeners",
+    "doc": "Clears all event listeners",
+    "fields": {
+        "AEn": {
+            "caption": "Caution this clears all event listeners including markers",
+            "editor": "Label",
+            "name": "caution_this_clears_all_event_listeners_including_markers",
+            "rank": 0
+        }
+    }
+}

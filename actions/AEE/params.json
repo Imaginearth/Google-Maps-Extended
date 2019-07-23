@@ -1,0 +1,62 @@
+{
+    "category": "analytics",
+    "display": "Maps Extended - Distance (API Free)",
+    "fields": {
+        "AEF": {
+            "caption": "From Latitude",
+            "default_val": " 43.653226",
+            "doc": "From latitude",
+            "editor": "DynamicValue",
+            "name": "from_latitude",
+            "rank": 0,
+            "value": "text"
+        },
+        "AEG": {
+            "caption": "To Latitude",
+            "default_val": "-79.38318429999998",
+            "doc": "To latitude",
+            "editor": "DynamicValue",
+            "name": "to_latitude",
+            "rank": 2,
+            "value": "text"
+        },
+        "AEH": {
+            "caption": "From Longitude",
+            "default_val": "40.7127753",
+            "doc": "From longitude",
+            "editor": "DynamicValue",
+            "name": "from_longitude",
+            "rank": 1,
+            "value": "text"
+        },
+        "AEI": {
+            "caption": "To Longitude",
+            "default_val": "-74.0059728",
+            "doc": "To longitude",
+            "editor": "DynamicValue",
+            "name": "to_longitude",
+            "rank": 3,
+            "value": "text"
+        },
+        "AEJ": {
+            "caption": "Output Unit",
+            "default_val": "km",
+            "doc": "Can be set to km,meter,mile,foot,yard",
+            "editor": "DynamicValue",
+            "name": "output_unit",
+            "optional": true,
+            "options": "",
+            "rank": 4,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AEK": {
+            "caption": "distance",
+            "name": "distance",
+            "rank": 0,
+            "value": "number"
+        }
+    },
+    "type": "server_side"
+}

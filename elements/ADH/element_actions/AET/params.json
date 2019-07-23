@@ -1,0 +1,34 @@
+{
+    "caption": "Attach Event Listener",
+    "doc": "Adds an event listener to the map",
+    "fields": {
+        "AEU": {
+            "caption": "Listener Type",
+            "doc": "The listener type",
+            "editor": "Dropdown",
+            "name": "listener",
+            "options": "Bounds Changed,Center Changed,Click,Double Click,Drag,Drag End,Drag Start,Heading Changed,Idle,Map Type Changed,Mouse Move,Mouse Out,Mouse Over,Projection Changed,Resize,Right Click,Tiles Loaded,Tilt Changed,Zoom Changed",
+            "rank": 1
+        },
+        "AEV": {
+            "caption": "Delay (ms)",
+            "default_val": 1000,
+            "doc": "Sets a delay on the event.  This is useful when you want to wait before executing a workflow that may need a  delay to ensure that the user has interacted with the map.  For example, after a user pans a map wait for 1000 ms before executing a workflow",
+            "editor": "StaticNumber",
+            "name": "delay",
+            "rank": 2
+        },
+        "AEZ": {
+            "caption": "Please note existing event listeners of the same type are overwritten to avoid duplicates.",
+            "editor": "Label",
+            "name": "existing_event_listeners_of_the_same_type_are_over_written_to_avoid_duplicates",
+            "rank": 3
+        },
+        "AEc": {
+            "caption": "Use this action to add an event listener to the map instance.  Exposed states in the map like map center, boundaries & others will only become available once there corresponding event listener are activated.  For example to receive updates on the center of the map then add the \"Center Changed\" event listener.  Once the map's center has changed due to an interaction then an event is fired(which can be accessed under \"Event Fired\") and the state of the map's center will be updated",
+            "editor": "Label",
+            "name": "use_this_action_to_add_an_event_listener_to_the_map_instance.__exposed_states_in_the_map_like_map_center,_boundaries_&_others_will_only_become_available_once_there_corresponding_event_listener_are_activated.__for_example_to_receive_updates_on_the_center_of_the_map_then_add_the_\"center_changed\"_event_listener.__once_the_map's_center_has_changed_due_to_an_interaction_then_an_event_is_fired(which_can_be_accessed_under_\"event_fired\")_and_the_state_of_the_map's_center_will_be_updated",
+            "rank": 0
+        }
+    }
+}

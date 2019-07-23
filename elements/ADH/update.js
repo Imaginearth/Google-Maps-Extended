@@ -1,6 +1,9 @@
 function(instance, properties, context) {
-  
+
 /*global google*/
+//Events: https://developers.google.com/maps/documentation/javascript/events
+
+
 //load Instances
 let div = instance.data.div;
 let instanceid = instance.data.instanceid;
@@ -10,7 +13,7 @@ let center_location = properties.center_location;
 let zoom = properties.zoom;
 
 
-//Builds a sinle or array of locations
+//Builds a single address or array of locations
 let getMapAddress = function initAddress(bubbleGeoAddress) {
     let obj = {};
     if (bubbleGeoAddress.prop && bubbleGeoAddress.prop.constructor === Array) {
@@ -56,7 +59,7 @@ instance.data.getMapType = getMapType;
 
 
 //Building map object
-let getMapObj = function initObj (geoCenter,type,zoom){
+function initObj(geoCenter, type, zoom) {
     let obj = {};
 
     //Determine center
@@ -64,25 +67,24 @@ let getMapObj = function initObj (geoCenter,type,zoom){
     obj.mapTypeId = getMapType(type);
     obj.zoom = zoom;
 
-
     return obj;
-};
-//Attach to instance
-instance.data.getMapObj =  getMapObj;
+}
 
 
 //Init Map
 function initMap() {
-    instance.data.gmapext = new google.maps.Map(document.getElementById(instanceid),getMapObj(center_location,map_type,zoom)) ;
+    //Init the map and add to instance
+    instance.data.gmapext = new google.maps.Map(document.getElementById(instanceid), initObj(center_location, map_type, zoom));
 }
 
 
-
 //Start the map
-$(document).ready(function () {
-    initMap();
+$(document).ready(function(){
+    setTimeout(function(){
+ 
+        initMap();
+ 
+    },1000);
 });
-
-
-
+    
 }
