@@ -8,7 +8,7 @@
             "editor": "Dropdown",
             "name": "map_type",
             "options": "Roadmap,Satellite,Hybrid,Terrain",
-            "rank": 0
+            "rank": 1
         },
         "ADq": {
             "caption": "Zoom",
@@ -17,7 +17,7 @@
             "editor": "DynamicValue",
             "name": "zoom",
             "optional": true,
-            "rank": 2,
+            "rank": 3,
             "value": "number"
         },
         "ADr": {
@@ -26,20 +26,20 @@
             "doc": "When active the map will trigger an event & update its state.  This is useful of you need to know what is clicked on the map",
             "editor": "Checkbox",
             "name": "attach_event",
-            "rank": 3
+            "rank": 4
         },
         "ADv": {
             "caption": "Data Type",
             "editor": "custom_type",
             "name": "list_type",
-            "rank": 4
+            "rank": 5
         },
         "ADx": {
             "caption": "Types to Plot",
             "editor": "DynamicValue",
             "is_list": true,
             "name": "types_to_plot",
-            "rank": 5,
+            "rank": 6,
             "value": "custom_data_ADv"
         },
         "ADz": {
@@ -47,7 +47,7 @@
             "editor": "custom_field_ADv",
             "field_type_restriction": "geographic_address",
             "name": "geolocation_field",
-            "rank": 6
+            "rank": 7
         },
         "AEA": {
             "caption": "Center To Address",
@@ -55,7 +55,7 @@
             "editor": "DynamicValue",
             "name": "center_to_address",
             "optional": true,
-            "rank": 1,
+            "rank": 2,
             "value": "geographic_address"
         },
         "AEB": {
@@ -63,14 +63,20 @@
             "editor": "custom_field_ADv",
             "field_type_restriction": "text_image_file",
             "name": "label_field",
-            "rank": 7
+            "rank": 8
         },
         "AEC": {
             "caption": "Cluster Image",
             "editor": "DynamicValue",
             "name": "cluster_image",
-            "rank": 8,
+            "rank": 9,
             "value": "image"
+        },
+        "AFX": {
+            "caption": "This action is not currently in active development.  Please reach out to the developer to prioritize this feature",
+            "editor": "Label",
+            "name": "this_option_is_not_currently_in_active_development.__please_reach_out_to_the_developer_to_prioritize_this_feature",
+            "rank": 0
         }
     }
 }

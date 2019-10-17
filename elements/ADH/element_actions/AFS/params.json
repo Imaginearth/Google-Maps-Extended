@@ -1,0 +1,12 @@
+{
+    "caption": "Clear All Markers",
+    "doc": "Deletes all markers",
+    "fields": {
+        "AFT": {
+            "caption": "This action clears all the markers on the map",
+            "editor": "Label",
+            "name": "this_action_clears_all_the_markers_on_the_map",
+            "rank": 0
+        }
+    }
+}

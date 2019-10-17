@@ -5,12 +5,18 @@ function(instance, properties, context) {
 
 
 //load Instances
-let div = instance.data.div;
 let instanceid = instance.data.instanceid;
+
+//Create data.instances
+//Keep track of all markers on map in this data instance so it can be used later
+instance.data.all_markers = [];
+
+
 //Load properties
 let map_type = properties.map_type;
 let center_location = properties.center_location;
 let zoom = properties.zoom;
+let customStyles = properties.custom_styles;
 
 
 //Builds a single address or array of locations
@@ -59,14 +65,16 @@ instance.data.getMapType = getMapType;
 
 
 //Building map object
-function initObj(geoCenter, type, zoom) {
+function initObj(geoCenter, type, zoom,style) {
     let obj = {};
 
     //Determine center
     obj.center = getMapAddress(geoCenter);
     obj.mapTypeId = getMapType(type);
+    if (style !== null){
+        obj.styles = JSON.parse(customStyles);
+    }
     obj.zoom = zoom;
-
     return obj;
 }
 
@@ -74,7 +82,7 @@ function initObj(geoCenter, type, zoom) {
 //Init Map
 function initMap() {
     //Init the map and add to instance
-    instance.data.gmapext = new google.maps.Map(document.getElementById(instanceid), initObj(center_location, map_type, zoom));
+    instance.data.gmapext = new google.maps.Map(document.getElementById(instanceid), initObj(center_location, map_type, zoom, customStyles));
 }
 
 

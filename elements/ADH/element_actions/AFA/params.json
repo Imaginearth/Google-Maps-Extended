@@ -1,0 +1,15 @@
+{
+    "caption": "Update Map Type",
+    "doc": "Changes the map type",
+    "fields": {
+        "AFB": {
+            "caption": "Map Type",
+            "default_val": "Roadmap",
+            "doc": "Changes the current map type",
+            "editor": "Dropdown",
+            "name": "map_type",
+            "options": "Roadmap,Satellite,Hybrid,Terrain",
+            "rank": 0
+        }
+    }
+}

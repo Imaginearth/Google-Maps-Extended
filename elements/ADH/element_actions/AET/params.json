@@ -7,7 +7,7 @@
             "doc": "The listener type",
             "editor": "Dropdown",
             "name": "listener",
-            "options": "Bounds Changed,Center Changed,Click,Double Click,Drag,Drag End,Drag Start,Heading Changed,Idle,Map Type Changed,Mouse Move,Mouse Out,Mouse Over,Projection Changed,Resize,Right Click,Tiles Loaded,Tilt Changed,Zoom Changed",
+            "options": "Bounds Changed,Center Changed,Click,Double Click,Drag,Drag End,Drag Start,Heading Changed,Idle,Map Type Changed,Mouse Move,Mouse Out,Mouse Over,Projection Changed,Resize,Right Click,Tiles Loaded,Tilt Changed,Zoom Changed,Visible Changed",
             "rank": 1
         },
         "AEV": {

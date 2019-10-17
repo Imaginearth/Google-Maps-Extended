@@ -1,7 +1,7 @@
 function(instance, properties, context) {
 
     
-    /*global google*/
+/*global google*/
 //Events: https://developers.google.com/maps/documentation/javascript/events
 
 //Load gmapext instances
@@ -11,32 +11,40 @@ let gmapext = instance.data.gmapext;
 let listener = properties.listener;
 let delay = properties.delay;
 
-
 let keyword;
 let eventFunction;
-
-
 
 switch (listener) {
 case 'Bounds Changed':
     keyword = 'bounds_changed';
-    eventFunction = function(){
-        let obj= gmapext.getBounds();
-        let ne = obj.getNorthEast();
-        instance.publishState('map_bounds_northeast_lat',ne.lat());
-        instance.publishState('map_bounds_northeast_lng',ne.lng());
-        let sw = obj.getSouthWest();
-        instance.publishState('map_bounds_southwest_lat',sw.lat());
-        instance.publishState('map_bounds_southwest_lng',sw.lng());
+    eventFunction = function() {
+        //Get Current bounds
+        let obj = gmapext.getBounds();
+        //Check if bounds have changed before pushing and update to prevent double firing
+        if (instance.data.cBounds !== obj) {
+        //If not the same then push an update
+            instance.data.cBounds = obj;
+            let ne = obj.getNorthEast();
+            instance.publishState('map_bounds_northeast_lat', ne.lat());
+            instance.publishState('map_bounds_northeast_lng', ne.lng());
+            let sw = obj.getSouthWest();
+            instance.publishState('map_bounds_southwest_lat', sw.lat());
+            instance.publishState('map_bounds_southwest_lng', sw.lng());
+        }
     };
     break;
 
 case 'Center Changed':
     keyword = 'center_changed';
-    eventFunction = function(){
-        let obj= gmapext.getCenter();
-        instance.publishState('map_center_lat',obj.lat());
-        instance.publishState('map_center_lng',obj.lng());
+    eventFunction = function() {
+        //Get Current center
+        let obj = gmapext.getCenter();
+        if (instance.data.cCenter !== obj) {
+        //If not the same then push an update
+            instance.data.cCenter = obj;
+            instance.publishState('map_center_lat', obj.lat());
+            instance.publishState('map_center_lng', obj.lng());
+        }
     };
     break;
 
@@ -108,25 +116,30 @@ case 'Zoom Changed':
     keyword = 'zoom_changed';
     break;
 
+case 'Visible Changed':
+    keyword = 'visible_changed';
+    break;
 }
 
-
-// Remove existing event liestner 
+// Remove existing event liestner
 google.maps.event.clearListeners(gmapext, keyword);
 
-
 //Attach Events with delay like this
-google.maps.event.addListener(gmapext, keyword, (function () {
-    let timer;
-    return function () {
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-            if (eventFunction) eventFunction(); //check if the function exists first
-            instance.publishState('event_listener_fired',keyword);
-            instance.triggerEvent('event_listener');
-        }, delay);
-    };
-}()));
+google.maps.event.addListener(
+    gmapext,
+    keyword,
+    (function() {
+        let timer;
+        return function() {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                if (eventFunction) eventFunction(); //check if the function exists first
+                instance.publishState('event_listener_fired', keyword);
+                instance.triggerEvent('event_listener');
+            }, delay);
+        };
+    })()
+);
 
 
 

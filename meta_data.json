@@ -1,0 +1,15 @@
+{
+    "categories": {
+        "0": "data (things)",
+        "1": "location",
+        "2": "visual elements"
+    },
+    "demo_page": "https://bh-showcase.bubbleapps.io/version-test/plugin-google-maps-ext",
+    "description": "An advanced map element. Get Layers, Directions, Map Events, Advanced Markers, APIs and so much more.  More to follow.",
+    "image": "//s3.amazonaws.com/appforest_uf/f1538673030721x718854931415990000/logo.svg",
+    "instructions": "For more information on how to configure this API, please visit the service URL.  Please post comments, concerns or suggestions for improvements to me by email.",
+    "license": "open_source",
+    "link": "https://developers.google.com/maps/web-services/",
+    "name": "Google Maps Extended",
+    "plugin_instructions": "Place the element on the page or call on the APIs.\nGet your API Key from here, \nhttps://console.developers.google.com "
+}

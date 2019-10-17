@@ -3,6 +3,10 @@
         "AED": {
             "name": "markerclusterer.js",
             "url": "//dd7tel2830j4w.cloudfront.net/f1552015616940x902714850066067600/markerclusterer.js"
+        },
+        "AFW": {
+            "name": "google-maps-backdrop.svg",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1564342140981x167118155838442900/google-maps-backdrop.svg"
         }
     },
     "dependencies": {

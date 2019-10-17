@@ -1,0 +1,14 @@
+{
+    "caption": "Toggle Marker Animation",
+    "doc": "Toggles animation on a chosen marker",
+    "fields": {
+        "AFC": {
+            "caption": "Marker ID",
+            "doc": "The marker id that you like to pan to",
+            "editor": "DynamicValue",
+            "name": "marker_id",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

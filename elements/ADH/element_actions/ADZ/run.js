@@ -1,18 +1,9 @@
 function(instance, properties, context) {
 
-/*global google*/
-/*global infowindow*/
-
-
-//load Instances
-let div = instance.data.div;
-let instanceid = instance.data.instanceid;
-
-
+/* eslint-disable no-undef */
 //Load gmapext instances
 let gmapext = instance.data.gmapext;
 let getMapAddress = instance.data.getMapAddress;
-let getMapType = instance.data.getMapType;
 
 //Load properties
 let origin_address = properties.origin_address;
@@ -26,6 +17,7 @@ let optimize_waypoints = properties.optimize_waypoints;
 let waypoints_list = [];
 properties.waypoints_list != null ? waypoints_list = properties.waypoints_list.get(0, properties.waypoints_list.length()) : waypoints_list = [];
 let driving_options = properties.driving_options;
+let transit_options = properties.transit_options;
 
 
 
@@ -108,7 +100,13 @@ function initDirections() {
         obj.drivingOptions = doObj;
     }
 
-    console.log(obj);
+    //Transit Options
+    if (transit_options.length > 0){
+        //TODO: Add travel options
+        // eslint-disable-next-line no-console
+        console.log('Travel options are not configured.  Please reach out to the plugin developer...');
+    }
+
     return obj;
 }
 

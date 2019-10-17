@@ -2,31 +2,23 @@
     "caption": "Add Marker",
     "doc": "Add a marker to the map",
     "fields": {
-        "ADM": {
-            "caption": "Map type",
-            "default_val": "Roadmap",
-            "doc": "Type of map to show",
-            "editor": "Dropdown",
-            "name": "map_type",
-            "options": "Roadmap,Satellite,Hybrid,Terrain",
-            "rank": 0
-        },
         "ADN": {
             "caption": "Address",
             "default_val": "",
             "doc": "The geo-address of where to add the marker.",
             "editor": "DynamicValue",
             "name": "address",
-            "rank": 1,
+            "rank": 0,
             "value": "geographic_address"
         },
         "ADO": {
             "caption": "Center to address",
             "default_val": true,
             "doc": "Centers the map to the address provided",
-            "editor": "Checkbox",
+            "editor": "DynamicValue",
             "name": "center_to_address",
-            "rank": 2
+            "rank": 1,
+            "value": "boolean"
         },
         "ADP": {
             "caption": "Tooltip",
@@ -35,7 +27,7 @@
             "editor": "DynamicValue",
             "name": "tooltip",
             "optional": true,
-            "rank": 4,
+            "rank": 5,
             "value": "text"
         },
         "ADQ": {
@@ -46,25 +38,72 @@
             "long_text": true,
             "name": "info_window",
             "optional": true,
-            "rank": 5,
+            "rank": 6,
             "value": "text"
         },
         "ADR": {
-            "caption": "Zoom",
+            "caption": "Zoom Level",
             "default_val": 13,
-            "doc": "The zoom level",
+            "doc": "zoom level when the marker is set",
             "editor": "DynamicValue",
-            "name": "zoom",
+            "name": "zoom_level",
+            "optional": false,
             "rank": 3,
             "value": "number"
         },
         "ADU": {
             "caption": "Attach Event",
             "default_val": false,
-            "doc": "When active the map will trigger an event & update its state.  This is useful of you need to know what is clicked on the map",
+            "doc": "When active the map will trigger an event & update its state.  This is useful of you need to know what is clicked on the map that returns its assigned ID",
             "editor": "Checkbox",
             "name": "attach_event",
-            "rank": 6
+            "rank": 8
+        },
+        "AEo": {
+            "caption": "Marker ID",
+            "default_val": "A1",
+            "doc": "The ID of the marker that will be returned when its clicked.  Please activate the attach event below to have the element return the clicked marker",
+            "editor": "DynamicValue",
+            "name": "mId",
+            "rank": 4,
+            "value": "text"
+        },
+        "AEp": {
+            "caption": "Zoom",
+            "default_val": false,
+            "doc": "Zooms to the marker",
+            "editor": "DynamicValue",
+            "name": "zoom",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AEq": {
+            "caption": "Infowindow Max Width (px)",
+            "default_val": 0,
+            "doc": "Leave at 0 or empty to disregard the max width",
+            "editor": "DynamicValue",
+            "name": "infowindow_maxwidth",
+            "optional": true,
+            "rank": 7,
+            "value": "number"
+        },
+        "AEr": {
+            "caption": "Marker Icon URL",
+            "default_val": "//s3.amazonaws.com/appforest_uf/f1564267477460x577631032014538100/beachflag.png",
+            "editor": "DynamicValue",
+            "name": "marker_icon_uri",
+            "optional": true,
+            "rank": 10,
+            "value": "image"
+        },
+        "AEs": {
+            "caption": "Custom Marker Image",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "custom_marker_image",
+            "optional": false,
+            "rank": 9,
+            "value": "boolean"
         }
     }
 }

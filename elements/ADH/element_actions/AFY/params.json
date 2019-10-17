@@ -1,0 +1,33 @@
+{
+    "caption": "Center & Zoom Map",
+    "doc": "Centers the map to specific location and adjusts zoom",
+    "fields": {
+        "AFZ": {
+            "caption": "Location",
+            "doc": "The location to center on",
+            "editor": "DynamicValue",
+            "name": "location",
+            "rank": 0,
+            "value": "geographic_address"
+        },
+        "AFa": {
+            "caption": "Zoom",
+            "default_val": true,
+            "doc": "Zoom to location specified above",
+            "editor": "DynamicValue",
+            "name": "adjust_zoom",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AFb": {
+            "caption": "Zoom Level",
+            "default_val": 10,
+            "doc": "The zoom level between 0 - 24.  Please note that not all locations have deep zoom levels.  This range is just a guideline but all zoom levels under 0 will be ignored",
+            "editor": "DynamicValue",
+            "name": "zoom_level",
+            "optional": true,
+            "rank": 2,
+            "value": "number"
+        }
+    }
+}

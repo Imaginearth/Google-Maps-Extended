@@ -1,0 +1,83 @@
+{
+    "caption": "Add Markers List",
+    "doc": "Add a list of markers",
+    "fields": {
+        "AFE": {
+            "caption": "Thing",
+            "editor": "custom_type",
+            "name": "thing",
+            "rank": 0
+        },
+        "AFF": {
+            "caption": "List of Things",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_things",
+            "rank": 1,
+            "value": "custom_data_AFE"
+        },
+        "AFG": {
+            "caption": "Address Field",
+            "editor": "custom_field_AFE",
+            "field_type_restriction": "geographic_address",
+            "name": "address_field",
+            "rank": 2
+        },
+        "AFH": {
+            "caption": "ID Field",
+            "editor": "custom_field_AFE",
+            "field_type_restriction": "text_image_file",
+            "name": "id_field",
+            "rank": 3
+        },
+        "AFI": {
+            "caption": "Tooltip Field",
+            "editor": "custom_field_AFE",
+            "field_type_restriction": "text_image_file",
+            "name": "tooltip_field",
+            "optional": true,
+            "rank": 4
+        },
+        "AFJ": {
+            "caption": "Info Window Field",
+            "editor": "custom_field_AFE",
+            "field_type_restriction": "text_image_file",
+            "name": "info_window_field",
+            "optional": true,
+            "rank": 5
+        },
+        "AFK": {
+            "caption": "Marker Icons",
+            "editor": "custom_field_AFE",
+            "field_type_restriction": "text_image_file",
+            "name": "marker_icon_field",
+            "optional": true,
+            "rank": 7
+        },
+        "AFM": {
+            "caption": "Infowindow Max Width (px)",
+            "default_val": 0,
+            "doc": "Maximum infowindow width in px.  Leave 0 or empty for no width restrictions",
+            "editor": "DynamicValue",
+            "name": "infowindow_max",
+            "optional": true,
+            "rank": 6,
+            "value": "number"
+        },
+        "AFN": {
+            "caption": "Attach Events",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "attach_event",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "AFO": {
+            "caption": "Pan to Markers",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "auto_center",
+            "rank": 9
+        }
+    }
+}

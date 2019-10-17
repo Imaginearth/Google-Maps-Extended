@@ -1,0 +1,12 @@
+{
+    "caption": "Pan to Markers",
+    "doc": "Pand and center on markers",
+    "fields": {
+        "AFR": {
+            "caption": "This action pans and centers the map relative to the markers on the map",
+            "editor": "Label",
+            "name": "this_action_pans_and_centers_the_map_relative_to_the_markers_on_the_map",
+            "rank": 0
+        }
+    }
+}

@@ -5,7 +5,7 @@
         "height": 200,
         "width": 400
     },
-    "display": "Map Extended",
+    "display": "Maps Extended",
     "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1538672941421x514713122043758660/placeholder.svg",
     "events": {
         "ADS": {
@@ -23,6 +23,7 @@
         "ADI": {
             "caption": "Map Type",
             "default_val": "Roadmap",
+            "doc": "Select a map style or define your own below",
             "editor": "Dropdown",
             "in_style": true,
             "name": "map_type",
@@ -31,26 +32,36 @@
         },
         "ADJ": {
             "caption": "Center Location",
-            "doc": "",
+            "doc": "The center of the map",
             "editor": "DynamicValue",
             "name": "center_location",
-            "rank": 1,
+            "rank": 2,
             "value": "geographic_address"
         },
         "ADK": {
             "caption": "Zoom",
             "default_val": 4,
-            "doc": "",
+            "doc": "The zoom level",
             "editor": "DynamicValue",
             "name": "zoom",
-            "rank": 2,
+            "rank": 3,
             "value": "number"
         },
         "ADm": {
             "caption": "This Google Map Extended element can be manipulated using the workflows. Please head to workflow > Element Actions > Map Extended",
             "editor": "Label",
             "name": "control_map_actions,_like_markers_or_directions_using_the_workflow.",
-            "rank": 3
+            "rank": 4
+        },
+        "AFU": {
+            "caption": "Custom Styles",
+            "doc": "Define your own custom style or pick one up from snazzymaps.com/",
+            "editor": "StaticText",
+            "in_style": true,
+            "long_text": true,
+            "name": "custom_styles",
+            "optional": true,
+            "rank": 1
         }
     },
     "icon": "ion-map",
@@ -62,15 +73,6 @@
         "resizable": true
     },
     "states": {
-        "ADT": {
-            "caption": "Marker Clicked",
-            "doc": "The marker that is clicked",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "marker_clicked",
-            "value": "geographic_address"
-        },
         "AEa": {
             "caption": "Event type fired",
             "doc": "The type of the event listener fired.  For a complete list of events please see google maps documentation",
@@ -132,6 +134,33 @@
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
             "name": "map_bounds_southwest_lng",
+            "value": "number"
+        },
+        "AEu": {
+            "caption": "Marker Clicked ID",
+            "doc": "The clicked marker ID",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "marker_clicked",
+            "value": "text"
+        },
+        "AEv": {
+            "caption": "Marker Clicked Lat",
+            "doc": "The clicked marker latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "marker_clicked_lat",
+            "value": "number"
+        },
+        "AEw": {
+            "caption": "Marker Clicked Lng",
+            "doc": "The clicked marker longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "marker_clicked_lng",
             "value": "number"
         }
     }
